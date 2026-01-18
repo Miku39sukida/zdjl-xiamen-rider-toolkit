@@ -1,5 +1,5 @@
 # zdjl-xiamen-rider-toolkit
-Xiamen Delivery Rider Efficiency Toolkit (Auto.js Dual-Device Scripts)
+Xiamen Delivery Rider Efficiency Toolkit (Auto Sprite Dual-Device Scripts)
 Mobile + Tablet Dual-Device Integration, Address Extraction + Auto Navigation in One Step
 
 ## 🌐 Languages / 语言 / 言語
@@ -83,4 +83,5 @@ Welcome to help update config files and improve Xiamen local merchant aliases an
 - **Config Priority**: Web config overrides local JSON, suggest testing on web first then sync to file
 
 Config file updates benefit all users, thank you to every contributor! 🎉
+
 
