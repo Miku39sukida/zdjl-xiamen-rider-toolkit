@@ -12,17 +12,17 @@ Mobile + Tablet Dual-Device Integration, Address Extraction + Auto Navigation in
 | config_webui.py     | Mobile Web Config Service  | Mobile | Any directory (suggested: Documents folder) |
 | merchant_alias.json | Xiamen Merchant Alias Config (Meituan POI) | General | **Mobile/Tablet storage root** |
 | requirements.txt    | Python Dependencies        | Mobile | Same directory as `config_webui.py` |
-| 自动获取取送地址.zjs | Auto Extract Pickup/Delivery Address | Tablet | Auto.js script directory |
-| 个人跑单专用_竖屏.zjs| Receive address and launch Meituan Navigation | Mobile | Auto.js script directory |
+| 自动获取取送地址.zjs | Auto Extract Pickup/Delivery Address | Tablet | Auto Sprite script directory |
+| 个人跑单专用_竖屏.zjs| Receive address and launch Meituan Navigation | Mobile | Auto Sprite script directory |
 
 ## 🚀 Dual-Device Setup Steps
 1. **Prerequisites**: Place `merchant_alias.json` in the storage root directory of both mobile and tablet to ensure scripts can read the config
-2. **Tablet**: Open Auto.js → Import "自动获取取送地址.zjs" → Run script then switch to order page (supports Ele.me/Meituan/UU)
+2. **Tablet**: Open Auto Sprite → Import "自动获取取送地址.zjs" → Run script then switch to order page (supports Ele.me/Meituan/UU)
 3. **Mobile**:
    - Open Pydroid/Termux → Navigate to `config_webui.py` directory, run: `pip install -r requirements.txt` (first time only)
    - Run: `python config_webui.py` to start config service
    - Browser access `MobileIP:5000` → Verify config loaded successfully (Xiamen local address prefix should appear)
-   - Open Auto.js → Run "个人跑单专用_竖屏.zjs" → Automatically receive address from tablet and launch Meituan navigation
+   - Open Auto Sprite → Run "个人跑单专用_竖屏.zjs" → Automatically receive address from tablet and launch Meituan navigation
 
 ## ⚙️ Configuration Notes
 - Config file must be in storage root directory (no nested folders), otherwise scripts cannot read it
@@ -48,12 +48,12 @@ In conversation, say any navigation destination, let AI call the map, tap to ent
 
 ## ❓ Quick Start FAQ
 1. **Script not responding?**
-   - Check if Auto.js has "Floating Window + Accessibility Permission" enabled (these are required for script operation)
+   - Check if Auto Sprite has "Floating Window + Accessibility Permission" enabled (these are required for script operation)
    - Confirm order page is in portrait mode (scripts are designed for portrait interface)
 
 2. **Config file not found?**
    - Check if `merchant_alias.json` is in storage root directory (not in subfolder like "Internal Storage", should be directly in "My Phone" root)
-   - Restart Auto.js and run script again
+   - Restart Auto Sprite and run script again
 
 3. **Python service failed to start?**
    - First run `pip install -r requirements.txt` to install dependencies
@@ -83,5 +83,4 @@ Welcome to help update config files and improve Xiamen local merchant aliases an
 - **Config Priority**: Web config overrides local JSON, suggest testing on web first then sync to file
 
 Config file updates benefit all users, thank you to every contributor! 🎉
-
 
